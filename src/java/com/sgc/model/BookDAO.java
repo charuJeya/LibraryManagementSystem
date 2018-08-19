@@ -19,7 +19,7 @@ public class BookDAO {
     public void saveBook(book bk) throws ClassNotFoundException,SQLException {
         databaseConnection dbconnection = new databaseConnection();
         Connection con = dbconnection.getDbConnection();
-        
+        // first comment 
         Statement statement = con.createStatement(); 
         String sql="insert into bookdetails(bookId,title,author,mainClassification,subClassification,yearOfPublishing,lastPrintedYear,isbnNo,noOfPages) values('"+bk.getBookId()+"','"+bk.getAuthor()+"','"+bk.getTitle()+"','"+bk.getMainClassification()+"','"+bk.getSubClassification()+"','"+bk.getYearOfPublishing()+"','"+bk.getLastPrintedYear()+"','"+bk.getIsbnNo()+"','"+bk.getNoOfPages()+"')";
 //        String sql = "insert into bookdetails(`bookId`, `title`, `author`, `mainClassification`, `subClassification`, `yearOfPublishing`, `lastPrintedYear`, `isbnNo`, `noOfPages`) values('"+addbook.getBookId()+"','"+addbook.getTitle()+"','"+addbook.getAuthor()+"','"+addbook.getMainClassification()+"','"+addbook.getSubClassification()+"','"+addbook.getYearOfPublishing()+"','"+addbook.getLastPrintedYear()+"','"+addbook.getIsbnNo()+"','"+addbook.getNoOfPages()+"')";
