@@ -113,7 +113,7 @@ input[type=reset]:hover {
         <label for="BookId">Book Id</label>
       </div>
       <div class="col-75">
-          <input type="text" id="BookId" name="BookId" placeholder="Book Id..." maxlength="20">
+          <input type="text" id="BookId" name="BookId" placeholder="Book Id..." maxlength="20" value="${BookId}">
       </div>
     </div>
 	<div class="row">
@@ -121,7 +121,7 @@ input[type=reset]:hover {
         <label for="Title">Title</label>
       </div>
       <div class="col-75">
-          <input type="text" id="Title" name="Title" placeholder="Book Title..." maxlength="45">
+          <input type="text" id="Title" name="Title" placeholder="Book Title..." maxlength="45" value="${Title}">
       </div>
     </div>
 	<div class="row">
@@ -129,7 +129,7 @@ input[type=reset]:hover {
         <label for="Author">Author</label>
       </div>
       <div class="col-75">
-          <input type="text" id="Author" name="Author" placeholder="Book Author..." maxlength="45">
+          <input type="text" id="Author" name="Author" placeholder="Book Author..." maxlength="45" value="${Author}">
       </div>
     </div>
     <div class="row">
@@ -137,7 +137,7 @@ input[type=reset]:hover {
         <label for="Main Classification">Main Classification</label>
       </div>
       <div class="col-75">
-          <select class="form-control" name="mainClassificationId"  onchange="selectvalue(form)">
+          <select class="form-control" name="mainClassificationId"  onchange="selectvalue(this.form)">
             <c:forEach items="${mainclassificationList}" var="mainstatus">
                                 <option value="${mainstatus}" >${mainstatus}</option>
                             </c:forEach>

@@ -95,6 +95,17 @@ public class ListController extends HttpServlet {
        request.setAttribute("subclassificationList", x);
        request.setAttribute("mainclassificationList", y);
        ServletContext context=getServletContext();
+        request.setAttribute("BookId", request.getParameter("BookId"));
+        request.setAttribute("Title", request.getParameter("Title"));
+        request.setAttribute("Author", request.getParameter("Author"));
+        request.setAttribute("MainClassificationId", request.getParameter("MainClassificationId"));
+        request.setAttribute("SubClassificationId", request.getParameter("SubClassificationId"));
+        request.setAttribute("YearOfPublishing", request.getParameter("YearOfPublishing"));
+        request.setAttribute("LastPrintedYear", request.getParameter("LastPrintedYear"));
+        request.setAttribute("ISBNNO", request.getParameter("ISBNNO"));
+       
+        
+        
         RequestDispatcher rd=context.getRequestDispatcher("/addBook.jsp");
         rd.forward(request, response);
     }

@@ -69,7 +69,7 @@ public class classificationController extends HttpServlet {
          BookDAO sname =new BookDAO();
          List y = sname.S_name();
          request.setAttribute("subclassificationList", y);
-      
+     
           request.getRequestDispatcher("./addBook.jsp").forward(request, response);
     }
 
